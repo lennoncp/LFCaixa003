@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.TelaController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="198.0" prefWidth="798.0">
+         <children>
+            <BarChart fx:id="brAnaliseRange25Numeros" prefHeight="60.0" prefWidth="770.0" title="Analise de quantidade de dezenas por Range">
+              <xAxis>
+                <CategoryAxis endMargin="1.0" label="Dezenas" side="BOTTOM" startMargin="1.0" fx:id="xAnalisedeRange" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAnaliseRange" label="Quantidade" side="LEFT" />
+              </yAxis>
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </HBox.margin>
+            </BarChart>
+            <VBox alignment="CENTER" prefHeight="150.0" prefWidth="218.0">
+               <children>
+                  <GridPane prefHeight="106.0" prefWidth="109.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="txfRange" alignment="CENTER" maxWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" promptText="Range" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Button fx:id="btnAnalisar" alignment="CENTER" mnemonicParsing="false" onAction="#analisarRange" prefHeight="30.0" prefWidth="120.0" text="Analisar" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets right="2.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="277.0" prefWidth="800.0">
+         <children>
+            <VBox prefHeight="394.0" prefWidth="193.0">
+               <children>
+                  <BarChart fx:id="brMediaImparPar" title="Impar/Par">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xMediaImparPar" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yMediaImparPar" label="Media" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <BarChart>
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <BarChart>
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </VBox>
+            <VBox prefHeight="404.0" prefWidth="500.0" HBox.hgrow="ALWAYS" />
+            <VBox prefHeight="200.0" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</VBox>
